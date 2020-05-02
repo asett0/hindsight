@@ -3,5 +3,6 @@
     "ASX:RIO" : "Rio Tinto",
     "ASX:CBA" : "Commonwealth Bank",
     "ASX:VGS" : "Vanguard MSCI Index International Shares ETF",
-    "ASX:VGE" : "Vanguard Emerging Markets Share ETF"
+    "ASX:VGE" : "Vanguard Emerging Markets Share ETF",
+    "ASX:VBND" : "Vanguard Global Aggregate Bond Index"
 }
