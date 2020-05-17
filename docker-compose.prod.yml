@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+    nginx:
+        build:
+            context: .
+            target: prod
+            dockerfile: nginx.Dockerfile
+
+        ports:
+            - "80:80" 

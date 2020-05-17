@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+    elmlive:
+        build:
+            context: .
+            target: dev
+            dockerfile: elmlive.Dockerfile
+        ports:
+            - "8000:8000"
+        volumes:
+            - "./frontend/src:/app/frontend/src"
+    flask:
+        environment:
+            - FLASKENV=development

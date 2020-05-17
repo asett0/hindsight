@@ -1,0 +1,12 @@
+# For publishing ports it goes HOST:CONTAINER
+version: "3.8"
+services:
+    flask:
+        build:
+            context: .
+            dockerfile: flask.Dockerfile
+        environment:
+            - ALPHA_ADVANTAGE_API_KEY=${ALPHA_ADVANTAGE_API_KEY}
+        ports:
+            - "5000:5000"
+
