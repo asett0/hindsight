@@ -11,4 +11,8 @@ services:
             - "./frontend/src:/app/frontend/src"
     flask:
         environment:
-            - FLASKENV=development
+            - FLASK_ENV=development
+        ports:
+            - "5000:5000"
+        volumes:
+            - "./api/src:/app/api/src"

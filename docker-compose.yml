@@ -7,6 +7,4 @@ services:
             dockerfile: flask.Dockerfile
         environment:
             - ALPHA_ADVANTAGE_API_KEY=${ALPHA_ADVANTAGE_API_KEY}
-        ports:
-            - "5000:5000"
-
+            - FLASK_APP=src/main.py

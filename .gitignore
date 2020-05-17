@@ -2,3 +2,4 @@
 .env
 .vscode
 elm-stuff/
+__pycache__/

@@ -7,8 +7,8 @@ import plotly.express as px
 from dash.dependencies import Input, Output
 import os
 import pandas as pd
-from flask_caching import Cache
-import redis
+# from flask_caching import Cache
+# import redis
 
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
 
