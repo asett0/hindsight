@@ -7,4 +7,5 @@ services:
             dockerfile: flask.Dockerfile
         environment:
             - ALPHA_ADVANTAGE_API_KEY=${ALPHA_ADVANTAGE_API_KEY}
+            - FINNHUB_KEY=${FINNHUB_KEY}
             - FLASK_APP=src/main.py
