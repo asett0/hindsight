@@ -1,3 +1,3 @@
-# Backtesting
+# Aqua
 
-Welcome to the backtester
+Aqua is a backtesting library and platform written in Rust.
