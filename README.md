@@ -1,3 +1,3 @@
-# ASX Backtestester
+# Backtesting
 
-Welcome to the ASX backtester
+Welcome to the backtester
