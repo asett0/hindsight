@@ -1,11 +1,11 @@
 use crate::order::{self, OrderEvent, OrderType};
 use crate::portfolio::Portfolio;
 use crate::util::{ExchangeablePair, Price};
-use std::collections::{HashMap, HashSet};
+use std::collections::HashSet;
 
 pub type MarketEvent = HashSet<Price>;
 
-fn market_event_step(
+pub fn market_event_step(
     market_event: MarketEvent,
     orders: &mut Vec<OrderEvent>,
     portfolio: &mut Portfolio,
@@ -43,7 +43,7 @@ mod tests {
 
         let market_event = HashSet::from([price]);
         let mut orders = vec![order];
-        let mut portfolio = HashMap::new();
+        let mut portfolio = Portfolio::new();
 
         market_event_step(market_event, &mut orders, &mut portfolio);
 
@@ -74,7 +74,7 @@ mod tests {
 
         let market_event = HashSet::from([price]);
         let mut orders = vec![order];
-        let mut portfolio = HashMap::new();
+        let mut portfolio = Portfolio::new();
 
         market_event_step(market_event, &mut orders, &mut portfolio);
 
@@ -105,7 +105,7 @@ mod tests {
 
         let market_event = HashSet::from([price]);
         let mut orders = vec![order];
-        let mut portfolio = HashMap::new();
+        let mut portfolio = Portfolio::new();
 
         market_event_step(market_event, &mut orders, &mut portfolio);
 
@@ -136,7 +136,7 @@ mod tests {
 
         let market_event = HashSet::from([price]);
         let mut orders = vec![order];
-        let mut portfolio = HashMap::new();
+        let mut portfolio = Portfolio::new();
 
         market_event_step(market_event, &mut orders, &mut portfolio);
 

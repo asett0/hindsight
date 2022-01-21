@@ -1,6 +1,5 @@
 use crate::portfolio::{self, Portfolio};
 use crate::util::{ExchangeablePair, Price, Quantity, UUID};
-use std::collections::HashMap;
 
 #[derive(Debug)]
 pub enum OrderType {
@@ -40,10 +39,7 @@ fn is_fill(
 }
 
 pub fn try_fill(
-    price @ Price {
-        ex: price_ex,
-        value,
-    }: &Price,
+    price @ Price { value, .. }: &Price,
     order @ OrderEvent {
         ex: order_ex, amt, ..
     }: &OrderEvent,
@@ -166,7 +162,7 @@ mod tests {
             },
             value: 1.,
         };
-        let mut portfolio = HashMap::new();
+        let mut portfolio = Portfolio::new();
 
         assert!(try_fill(price, order, &mut portfolio));
         assert!((portfolio.get("AUD").unwrap() + 1.).abs() < eps);
@@ -191,7 +187,7 @@ mod tests {
             },
             value: 1.,
         };
-        let mut portfolio = HashMap::new();
+        let mut portfolio = Portfolio::new();
 
         assert!(!try_fill(price, order, &mut portfolio));
         assert!(portfolio.is_empty());
@@ -217,7 +213,7 @@ mod tests {
             },
             value: 1.,
         };
-        let mut portfolio = HashMap::new();
+        let mut portfolio = Portfolio::new();
 
         assert!(try_fill(price, order, &mut portfolio));
         assert!((portfolio.get("AUD").unwrap() + 1.).abs() < eps);
@@ -242,7 +238,7 @@ mod tests {
             },
             value: 1.,
         };
-        let mut portfolio = HashMap::new();
+        let mut portfolio = Portfolio::new();
 
         assert!(!try_fill(price, order, &mut portfolio));
         assert!(portfolio.is_empty());

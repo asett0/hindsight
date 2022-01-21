@@ -1,6 +1,6 @@
-mod event;
-mod fill;
-mod market;
-mod order;
-mod portfolio;
-mod util;
+pub mod event;
+pub mod fill;
+pub mod market;
+pub mod order;
+pub mod portfolio;
+pub mod util;

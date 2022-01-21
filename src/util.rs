@@ -29,4 +29,4 @@ impl PartialEq for Price {
     }
 }
 
-enum Void {}
+pub enum Void {}
