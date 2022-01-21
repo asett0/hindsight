@@ -1,6 +1,6 @@
-use crate::order::{self, OrderEvent, OrderType};
+pub use crate::order::{self, OrderEvent, OrderType};
 use crate::portfolio::Portfolio;
-use crate::util::{ExchangeablePair, Price};
+pub use crate::util::{ExchangeablePair, Price};
 use std::collections::HashSet;
 
 pub type MarketEvent = HashSet<Price>;
