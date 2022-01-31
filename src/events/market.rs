@@ -1,5 +1,5 @@
-pub use crate::order::{self, OrderEvent, OrderType};
-use crate::portfolio::Portfolio;
+use crate::event_generators::portfolio::Portfolio;
+pub use crate::events::order::{self, OrderEvent, OrderType};
 pub use crate::util::{ExchangeablePair, Price};
 use std::collections::HashSet;
 

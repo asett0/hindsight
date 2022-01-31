@@ -1,6 +1,6 @@
-use crate::fill::FillEvent;
-use crate::market::MarketEvent;
-use crate::order::OrderEvent;
+use crate::events::fill::FillEvent;
+use crate::events::market::MarketEvent;
+use crate::events::order::OrderEvent;
 use std::collections::VecDeque;
 
 pub enum Event {

@@ -1,4 +1,4 @@
-use crate::portfolio::{self, Portfolio};
+use crate::event_generators::portfolio::{self, Portfolio};
 use crate::util::{ExchangeablePair, Price, Quantity, UUID};
 
 #[derive(Debug)]
